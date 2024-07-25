@@ -31,11 +31,12 @@ h2 {
 }
 
 .header {
-    background: linear-gradient(to bottom, #4a90e2 10%, #0073e6 90%);
+    background: linear-gradient(to bottom, #e0f7fa 10%, #80deea 90%);
     width: 100%;
     padding-top: 16px;
     padding-bottom: 32px;
     color: #fff;
+    text-align: center;
 }
 
 .header-profile-picture, .header-text {
@@ -45,12 +46,13 @@ h2 {
 
 .header-name h1 {
     margin: 0;
-    color: #fff;
+    color: #00796b;
 }
 
 .header-subtitle {
     margin-bottom: 12px;
     font-size: 1.2em;
+    color: #004d40;
 }
 
 .header-profile-picture {
@@ -58,7 +60,7 @@ h2 {
     height: 120px;
     margin-right: 20px;
     border-radius: 50%;
-    background-image: url(files/me.png);
+    background-image: url(files/luciacolin.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
