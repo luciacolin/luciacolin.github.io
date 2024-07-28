@@ -26,7 +26,7 @@ h1 {
 }
 
 h2 {
-    margin-top: 48px;
+    margin-top: 32px; /* Reduced margin to decrease space between title and content */
     font-size: 1.2em;
     color: #345;
 }
@@ -151,6 +151,7 @@ p {
     margin-left: 16px;
     line-height: 1.7em;
     max-width: 600px;
+    flex: 1; /* Ensure text takes available space */
 }
 
 .row-text span {
@@ -179,6 +180,13 @@ p {
     background-size: cover;
     background-position: center;
     border-radius: 8px;
+}
+
+.project .project-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures paragraphs align properly */
+    flex: 1;
 }
 
 .publication.highlight {
