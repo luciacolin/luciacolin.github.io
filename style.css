@@ -16,6 +16,7 @@ body {
 h1, h2, h3, h4, h5 {
     font-weight: 700;
     color: #234;
+    margin: 0;
 }
 
 h1 {
@@ -39,9 +40,16 @@ h2 {
     text-align: center;
 }
 
-.header-profile-picture, .header-text {
-    display: inline-block;
-    vertical-align: middle;
+.header-profile-picture {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    background-image: url(files/luciacolin.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 3px solid #fff;
 }
 
 .header-name h1 {
@@ -55,21 +63,9 @@ h2 {
     color: #fff;
 }
 
-.header-profile-picture {
-    width: 120px;
-    height: 120px;
-    margin-right: 20px;
-    border-radius: 50%;
-    background-image: url(files/luciacolin.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: 3px solid #fff;
-}
-
 .header-links a {
     color: #fff;
-    background: none;  /* Remove button color */
+    background: none; /* Remove button color */
     padding: 0;
     margin: 0 5px;
     text-decoration: none;
@@ -82,8 +78,7 @@ h2 {
 
 .content {
     max-width: 900px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 16px;
     margin: auto;
     margin-top: 48px;
 }
@@ -107,7 +102,7 @@ a:focus, a:hover {
 p {
     line-height: 1.7em;
     text-align: justify; /* Justify text alignment */
-    margin: 0 0 1.5em 0; /* Uniform bottom margin for spacing between paragraphs */
+    margin: 0 0 1.5em; /* Uniform bottom margin for spacing between paragraphs */
 }
 
 .nobreak {
@@ -162,7 +157,7 @@ p {
     line-height: inherit;
 }
 
-.clearfix {
+.clearfix::after {
     content: "";
     clear: both;
     display: table;
@@ -189,8 +184,7 @@ p {
 .publication.highlight {
     background-color: #e3f2fd;
     width: 100%;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding: 8px 0;
     border-radius: 8px;
 }
 
@@ -237,31 +231,31 @@ p {
 }
 
 @media only screen and (max-width: 1150px) {
-    .header-profile-picture, .header-text {
-        display: block;
-        margin: auto;
-        text-align: center;
-    }
     .header-profile-picture {
-        margin-bottom: 12px;
         width: 140px;
         height: 140px;
     }
     body {
         font-size: 18px;
     }
+    .header-profile-picture, .header-text {
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
     .project {
         margin-bottom: 46px;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align to start vertically */
     }
     .project .project-media {
         width: 260px;
         height: 130px;
         margin: auto;
         margin-bottom: 12px;
-        display: block;
     }
     .project .row-text {
         display: block;
