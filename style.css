@@ -19,13 +19,13 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-    margin-bottom: 32px;
+    margin-bottom: 22px;
     font-size: 1.8em;
     color: #345;
 }
 
 h2 {
-    margin-top: 32px; /* Adjusted margin for better spacing */
+    margin-top: 22px; /* Adjusted margin for better spacing */
     font-size: 1.2em;
     color: #345;
 }
