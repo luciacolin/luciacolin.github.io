@@ -88,6 +88,12 @@ h2 {
     margin-top: 48px;
 }
 
+/* Justify text for paragraphs within .content */
+.content p {
+    text-align: justify;
+    text-justify: inter-word; /* Ensures even spacing between words */
+}
+
 .hr {
     width: 100%;
     height: 1px;
@@ -102,11 +108,6 @@ a {
 
 a:focus, a:hover {
     color: #005bb5;
-}
-
-p {
-    line-height: 1.7em;
-    text-align: justify; /* Added for text justification */
 }
 
 .nobreak {
