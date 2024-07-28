@@ -16,7 +16,6 @@ body {
 h1, h2, h3, h4, h5 {
     font-weight: 700;
     color: #234;
-    margin: 0;
 }
 
 h1 {
@@ -26,7 +25,7 @@ h1 {
 }
 
 h2 {
-    margin-top: 32px; /* Reduced margin to decrease space between title and content */
+    margin-top: 32px; /* Adjusted margin for better spacing */
     font-size: 1.2em;
     color: #345;
 }
@@ -40,16 +39,9 @@ h2 {
     text-align: center;
 }
 
-.header-profile-picture {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 12px;
-    border-radius: 50%;
-    background-image: url(files/luciacolin.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: 3px solid #fff;
+.header-profile-picture, .header-text {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .header-name h1 {
@@ -63,9 +55,21 @@ h2 {
     color: #fff;
 }
 
+.header-profile-picture {
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+    border-radius: 50%;
+    background-image: url(files/luciacolin.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 3px solid #fff;
+}
+
 .header-links a {
     color: #fff;
-    background: none; /* Remove button color */
+    background: none;  /* Remove button color */
     padding: 0;
     margin: 0 5px;
     text-decoration: none;
@@ -151,7 +155,7 @@ p {
     margin-left: 16px;
     line-height: 1.7em;
     max-width: 600px;
-    flex: 1; /* Ensure text takes available space */
+    text-align: justify; /* Justify text alignment in row text */
 }
 
 .row-text span {
@@ -187,6 +191,7 @@ p {
     flex-direction: column;
     justify-content: space-between; /* Ensures paragraphs align properly */
     flex: 1;
+    text-align: justify; /* Justify text alignment in project descriptions */
 }
 
 .publication.highlight {
@@ -239,17 +244,18 @@ p {
 }
 
 @media only screen and (max-width: 1150px) {
+    .header-profile-picture, .header-text {
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
     .header-profile-picture {
+        margin-bottom: 12px;
         width: 140px;
         height: 140px;
     }
     body {
         font-size: 18px;
-    }
-    .header-profile-picture, .header-text {
-        display: block;
-        margin: auto;
-        text-align: center;
     }
 }
 
@@ -265,7 +271,7 @@ p {
         margin: auto;
         margin-bottom: 12px;
     }
-    .project .row-text {
+    .project .project-text {
         display: block;
         width: 100%;
         margin-left: 0;
